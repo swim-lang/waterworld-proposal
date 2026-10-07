@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Water World × Anchovies · Visual Brand Standards Proposal</title>
+  <meta name="description" content="An Anchovies proposal for Hyland Hills Parks &amp; Recreation District / Water World: visual brand standards and style guide." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,900&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="stylesheet" href="styles.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="loader" id="loader" role="status" aria-live="polite">
+    <div class="loader-sun">
+      <svg class="loader-rays" viewBox="0 0 200 200" aria-hidden="true">
+        <g fill="#FFC629" opacity="0.55">
+          <path d="M100 0l7 34h-14z"/><path d="M100 200l-7-34h14z"/><path d="M0 100l34-7v14z"/><path d="M200 100l-34 7v-14z"/>
+          <path d="M29 29l29 19-10 10z"/><path d="M171 171l-29-19 10-10z"/><path d="M171 29l-19 29-10-10z"/><path d="M29 171l19-29 10 10z"/>
+        </g>
+      </svg>
+      <img src="assets/brand/sun.webp" alt="" width="250" height="222" />
+    </div>
+    <p class="loader-text">Opening the gates<span class="dots"><span>.</span><span>.</span><span>.</span></span></p>
+  </div>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="top">
+    <a class="lockup" href="#top" aria-label="Water World × Anchovies, back to top">
+      <img class="lockup-ww" src="assets/brand/water-world-logo.png" alt="Water World" width="153" height="36" />
+      <span class="lockup-x" aria-hidden="true">×</span>
+      <img class="lockup-an" src="assets/brand/anchovies-logo-ink.png" alt="Anchovies" width="136" height="20" />
+    </a>
+    <div class="nav-right">
+      <a class="nav-map" href="#top" hidden><span aria-hidden="true">←</span> Park map</a>
+      <a class="nav-cta" href="#pricing">Scope &amp; pricing <span class="badge">$10K</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div id="home">
+    <!-- ───────────── Hero + park map ───────────── -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Visual brand standards proposal</p>
+        <h1 id="hero-title">Everybody working from the same Water World.</h1>
+        <p class="lede">Your designer, marketing team, agency, and outside partners all contribute to how Water World shows up. We'll give them a shared system that makes the everyday decisions easier, brings the materials together, and leaves room for good ideas.</p>
+        <div class="cta-row">
+          <a class="btn btn-sun" href="#approach" data-desktop-label="Explore our approach" data-mobile-label="Start the tour">Explore our approach <span aria-hidden="true">→</span></a>
+          <a class="btn btn-outline" href="#pricing">See scope &amp; pricing</a>
+        </div>
+        <p class="meta">Prepared for Jenny Kramer, Director of Marketing &amp; Communications · Hyland Hills Parks &amp; Recreation District</p>
+      </div>
+      <div class="park" aria-label="Park map of the proposal. Choose a stop to take a closer look.">
+        <div class="park-stage" id="park-stage"></div>
+      </div>
+    </section>
+
+    <!-- Mobile: guided park tour (built by app.js) -->
+    <section class="tour" id="tour" aria-label="The park tour" hidden>
+      <div class="tour-head">
+        <h2>The park tour</h2>
+        <p class="tour-count" aria-live="polite">Stop <span id="tour-n">1</span> of 7</p>
+      </div>
+      <ol class="tour-track" id="tour-track"></ol>
+      <div class="tour-controls">
+        <button class="round" id="tour-prev" type="button" aria-label="Previous stop">←</button>
+        <div class="tour-dots" id="tour-dots" aria-hidden="true"></div>
+        <button class="round round-ink" id="tour-next" type="button" aria-label="Next stop">→</button>
+      </div>
+      <p class="tour-hint">Swipe for the next stop</p>
+    </section>
+    </div>
+
+    <!-- ───────────── 1 · Start here ───────────── -->
+    <section class="section" id="start" aria-labelledby="start-title">
+      <header class="section-head">
+        <p class="stop-label"><span class="num">1</span> Start here</p>
+        <h2 id="start-title">A lot of people making things. A few too many versions of the brand.</h2>
+      </header>
+      <div class="cols">
+        <div class="prose">
+          <p>Jenny, your answers helped clarify the assignment. Water World already has a recognizable logo and decades of brand equity. The practical challenge is getting everyone creating materials to work from the same visual decisions.</p>
+          <p>Different contributors are using different fonts, styles, and treatments. Your marketing team manages direction and approvals, but there isn't a clear visual system everyone can reliably work from.</p>
+          <p>We'll build that system around the strongest parts of the existing brand, with particular attention to typography. The work will support your primary audience of Colorado and regional families while allowing campaigns for groups, tourists, and young adults to adjust their tone and emphasis.</p>
+          <p>The standards should help someone choose a font, build a layout, brief a vendor, or review an ad with more confidence. They should also improve the materials themselves: clearer hierarchy, better relationships between elements, and a more consistent expression of the brand you already have.</p>
+        </div>
+        <aside class="note">
+          <h3>A note from Sean</h3>
+          <p>I grew up in Denver, so Water World was part of my summers long before it was a potential client.</p>
+          <p>That gives me a personal interest in the project, but your team's needs give us the starting point: clear standards, useful tools, and fewer decisions to remake every time someone creates something.</p>
+          <p>As we work, I'd also like to look back through the brand's history. There may be things worth bringing forward: a graphic detail, a particular attitude, something people remember. We'll see what earns its place.</p>
+          <p class="sig">Sean Ashlow<br /><span>Founder &amp; Creative Director</span></p>
+        </aside>
+      </div>
+      <h3 class="sub">What should get easier</h3>
+      <ul class="easier">
+        <li><span class="ez-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/></svg></span><h4>Creating materials</h4><p>A head start, fewer basic questions.</p></li>
+        <li><span class="ez-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="16" cy="8" r="3"/><path d="M3 19c0-3 2.5-5 5-5s5 2 5 5M11 19c0-3 2.5-5 5-5s5 2 5 5"/></svg></span><h4>Working with partners</h4><p>Same direction, same files, for everyone.</p></li>
+        <li><span class="ez-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M8.5 10.5l2 2 4-4"/></svg></span><h4>Reviewing work</h4><p>Feedback points to shared standards.</p></li>
+        <li><span class="ez-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span><h4>Keeping campaigns fresh</h4><p>Room to play, inside a dependable system.</p></li>
+        <li><span class="ez-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg></span><h4>Getting more from the brand</h4><p>The equity you have, used consistently.</p></li>
+      </ul>
+      <div class="ez-check">
+        <p class="ez-k">How we'll know it's working</p>
+        <p>At handoff, your team finds the right assets, picks a type treatment, and adapts a template. Anything that trips them up, we make clearer.</p>
+        <p class="fine">The goal is better consistency and less production friction, not attendance or revenue promises.</p>
+      </div>
+    </section>
+
+    <!-- ───────────── 2 · Our approach ───────────── -->
+    <section class="section tint" id="approach" aria-labelledby="approach-title">
+      <header class="section-head">
+        <p class="stop-label"><span class="num">2</span> Our approach</p>
+        <h2 id="approach-title">Get the basics working. Then see what they make possible.</h2>
+      </header>
+      <ol class="phase-steps">
+        <li>
+          <span class="ps-num">1</span>
+          <p class="ps-when">Phase 01 · Nov 18–24</p>
+          <h3>Understand the starting point</h3>
+          <p class="ps-sum">A kickoff workshop, focused input from your team and partners, and an audit of current and past materials.</p>
+          <p class="ps-out"><span>You get</span>A concise audit and agreed priorities</p>
+        </li>
+        <li>
+          <span class="ps-num">2</span>
+          <p class="ps-when">Phase 02 · Nov 25–Dec 11</p>
+          <h3>Develop the system</h3>
+          <p class="ps-sum">Typography first, then logo use, color, and a focused graphic language. Two approaches, one chosen direction.</p>
+          <p class="ps-out"><span>You get</span>An approved visual direction</p>
+        </li>
+        <li>
+          <span class="ps-num">3</span>
+          <p class="ps-when">Phase 03 · Dec 14–18</p>
+          <h3>Put it to work</h3>
+          <p class="ps-sum">Test the direction on real applications, define what stays fixed and what can flex, plus photo, video, and voice guidance.</p>
+          <p class="ps-out"><span>You get</span>Sample applications and four editable templates</p>
+        </li>
+        <li>
+          <span class="ps-num">4</span>
+          <p class="ps-when">Phase 04 · Dec 21–23</p>
+          <h3>Make the handoff useful</h3>
+          <p class="ps-sum">Organized files, a practical guide with common mistakes, a 60-minute walkthrough, and a transition plan.</p>
+          <p class="ps-out"><span>You get</span>Final guide, assets, templates, and training</p>
+        </li>
+      </ol>
+      <h3 class="sub">How each phase works</h3>
+      <div class="phase-details">
+        <details open><summary><span class="pd-n">01</span>Understand the starting point</summary>
+          <div class="pd-body">
+            <p>We'll begin with a kickoff workshop and focused input from marketing, the internal designer, a social/content contributor, and an agency representative. We'll review a representative collection of current and recent materials: website graphics, organic and paid social, display ads, email, outdoor, print, signage, video, promotional pieces, merchandise, and work produced by both staff and partners.</p>
+            <p>The audit will identify what is already consistent, what keeps changing, and where people need clearer direction. We'll distinguish assets with established equity from treatments that could benefit from refinement. Water World's existing logo is the starting point for its usage standards.</p>
+            <p>We'll also review available historical materials. Nostalgia can inform our choices when it connects the work to something meaningful and familiar. We'll consider how those references read to first-time visitors as well as people who grew up with the park.</p>
+          </div></details>
+        <details><summary><span class="pd-n">02</span>Develop the system</summary>
+          <div class="pd-body">
+            <p>Typography comes early. We'll establish clear roles for primary, secondary, and any supporting or display fonts, including headlines, subheads, body copy, and calls to action. Recommendations will consider readability, accessibility, licensing, web use, and practical availability in Canva and Adobe. We'll specify substitutes where the main fonts aren't available, including email environments.</p>
+            <p>We'll formalize logo usage and the color palette, then develop a focused graphic language. That may include shapes, patterns, textures, illustration direction, icons, frames, and backgrounds, with water or Colorado references where they serve the work. Existing mascot or character assets can be considered if supplied; a new mascot program would be a separate scope.</p>
+            <p>We'll present two focused visual approaches using representative applications, then develop one selected direction. Exploration will draw from the audit and useful historical references, keeping the system practical for today's production needs.</p>
+          </div></details>
+        <details><summary><span class="pd-n">03</span>Put it to work</summary>
+          <div class="pd-body">
+            <p>We'll test the selected direction across digital and physical applications, including short and long headlines, different photography, seasonal promotions, and informational messages.</p>
+            <p>We'll define the elements that stay consistent and the elements contributors can vary. A social post, billboard, and operational sign have different jobs; the system needs to account for those differences.</p>
+            <p>Photography and video direction will cover subject matter, guest representation, attractions and lifestyle imagery, composition, movement, lighting, color treatment, authentic and staged content, drone imagery, titles, overlays, and social-first video. Examples will show how professionally produced and internally captured content can work together.</p>
+            <p>Basic voice guidance will address personality, headline style, calls to action, humor, and the differences between promotional, informational, and operational messages.</p>
+          </div></details>
+        <details><summary><span class="pd-n">04</span>Make the handoff useful</summary>
+          <div class="pd-body">
+            <p>We'll organize the final standards and assets so staff and partners can find the current files and understand how to use them. The guide will include practical examples and common mistakes alongside specifications.</p>
+            <p>We'll conduct a 60-minute walkthrough for staff and agency partners, with time for questions. The transition plan will prioritize social, paid advertising, email, website creative, agency-produced work, and internal templates. Permanent signage, remaining print stock, merchandise, and environmental graphics can transition as replacement becomes appropriate.</p>
+          </div></details>
+      </div>
+    </section>
+
+    <!-- ───────────── 3 · Selected work ───────────── -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <header class="section-head split">
+        <div>
+          <p class="stop-label"><span class="num">3</span> Selected work</p>
+          <h2 id="work-title">A few things we've enjoyed making</h2>
+        </div>
+        <p class="lede-sm">Our work often involves illustration, characters, and expressive visual ideas. The part that matters here is how those ideas become a system people can use across different materials. We've selected these projects to show our range, our attention to the details, and our ability to carry a creative idea through the work.</p>
+      </header>
+
+      <article class="project">
+        <div class="project-info">
+          <p class="project-meta">01 · Retail · Denver, CO · 2025</p>
+          <h3>Tagawa Gardens</h3>
+          <ul class="chips"><li>Brand identity</li><li>Illustration</li><li>Signage</li><li>Print</li><li>Social</li></ul>
+          <dl class="caption">
+            <dt>What they needed</dt><dd>A historic Colorado garden center, founded in 1982 with deep roots in roses, wanted to attract a new generation without losing the trust, warmth, and legacy locals know by heart.</dd>
+            <dt>The idea</dt><dd>A gardener holding an oversized rose: a nod to their origins that puts the human side of gardening front and center.</dd>
+            <dt>How it carried through</dt><dd>A monochromatic, nature-led system, a clear and direct type treatment, legible wayfinding across the property, and a new motto, “Keep Growing.”</dd>
+            <dt class="rel">Why it's relevant to Water World</dt><dd class="rel">A beloved Denver institution with decades of equity, refreshed for a new generation without losing what people already trust.</dd>
+          </dl>
+        </div>
+        <div class="project-media">
+          <img class="hero-img" src="assets/work/tagawa-hero.jpg" alt="Tagawa Gardens billboard reading Great People, Great Plants, with plant illustrations" loading="lazy" />
+          <div class="thumbs">
+            <img src="assets/work/tagawa-1.jpg" alt="Tagawa Gardens wayfinding banners on a light post" loading="lazy" />
+            <img src="assets/work/tagawa-2.jpg" alt="Green Tagawa Gardens tote bag with the gardener illustration" loading="lazy" />
+            <img src="assets/work/tagawa-3.jpg" alt="Tagawa Gardens printed brochure held among leaves" loading="lazy" />
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-info">
+          <p class="project-meta">02 · Retail · National · 2025</p>
+          <h3>Moat</h3>
+          <ul class="chips"><li>Brand identity</li><li>Packaging</li><li>Print</li><li>Website</li></ul>
+          <dl class="caption">
+            <dt>What they needed</dt><dd>A smart-lock company with a tangle of products, sub-brands, and messaging that needed clarity, in a category where locks just aren't exciting.</dd>
+            <dt>The idea</dt><dd>Instead of trying to look techy, we dropped the whole brand into a medieval world, so protection, safety, and security suddenly had personality.</dd>
+            <dt>How it carried through</dt><dd>A simplified brand architecture and one coherent identity, carried across packaging, print, and the website: a brand universe no competitor was attempting.</dd>
+            <dt class="rel">Why it's relevant to Water World</dt><dd class="rel">One clear idea that pulled a tangle of products and messages into a single system everyone could work from.</dd>
+          </dl>
+        </div>
+        <div class="project-media">
+          <img class="hero-img" src="assets/work/moat-hero.jpg" alt="Three Moat phone screens: The Mace, None Dare Cross the Moat, The Shield" loading="lazy" />
+          <div class="thumbs">
+            <img src="assets/work/moat-1.jpg" alt="Moat quick-start guide" loading="lazy" />
+            <img src="assets/work/moat-2.jpg" alt="Moat smart-lock packaging" loading="lazy" />
+            <img src="assets/work/moat-3.jpg" alt="Moat poster in a bus shelter" loading="lazy" />
+          </div>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project-info">
+          <p class="project-meta">03 · Retail · Boston, MA · 2026</p>
+          <h3>Freddie</h3>
+          <ul class="chips"><li>Brand identity</li><li>Illustration</li><li>Motion</li></ul>
+          <dl class="caption">
+            <dt>What they needed</dt><dd>A newcomer rethinking sleep glasses for a younger audience, in a category crowded with performance claims and brands that take themselves a little too seriously.</dd>
+            <dt>The idea</dt><dd>An identity that felt unexpected for the space: anti-design, illustrative, youthful, colorful, and a little weird in the best way.</dd>
+            <dt>How it carried through</dt><dd>Built into a smart, flexible system that scales across materials without feeling rigid or overdesigned.</dd>
+            <dt class="rel">Why it's relevant to Water World</dt><dd class="rel">Expressive illustration and personality, held together by a system flexible enough for campaigns that change every season.</dd>
+          </dl>
+        </div>
+        <div class="project-media">
+          <img class="hero-img" src="assets/work/freddie-hero.jpg" alt="Freddie packaging: Glasses for a healthier bedtime routine" loading="lazy" />
+          <div class="thumbs">
+            <img src="assets/work/freddie-1.jpg" alt="Freddie poster: Good glasses for bad screen habits" loading="lazy" />
+            <img src="assets/work/freddie-2.jpg" alt="Freddie poster in a bus shelter at night" loading="lazy" />
+            <img src="assets/work/freddie-3.jpg" alt="Freddie illustration on a phone screen" loading="lazy" />
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ───────────── 4 · Your team ───────────── -->
+    <section class="section tint" id="team" aria-labelledby="team-title">
+      <header class="section-head">
+        <p class="stop-label"><span class="num">4</span> Your team</p>
+        <h2 id="team-title">You'll work with the people doing the work</h2>
+      </header>
+      <div class="cols">
+        <div class="prose">
+          <p>Anchovies is a boutique Denver agency working across brand identity, illustration, art direction, copy, and digital experiences. We bring established experience and a current perspective to the same table.</p>
+          <p>You'll have direct access to Sean and the designers developing the system, with clear conversations from the first review through the final handoff. The people presenting the proposal are also involved in delivering the work.</p>
+          <p>We care about expressive ideas and the less glamorous details: whether the type is readable, the files are organized, and someone can use a template without calling us. Both matter.</p>
+        </div>
+        <ul class="people">
+          <li><h3>Sean Ashlow</h3><p class="role">Founder &amp; Creative Director</p><p>Primary client contact; discovery, strategic direction, presentations, creative oversight, and final review.</p></li>
+          <li><h3>Kira Knoop</h3><p class="role">Illustrative Art Director</p><p>Graphic language, illustration direction, and visual-system development.</p></li>
+          <li><h3>Logan Causey</h3><p class="role">Art Director</p><p>Typography, application design, editable templates, visual consistency, and standards documentation.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ───────────── 5 · Try the tool ───────────── -->
+    <section class="section" id="tool" aria-labelledby="tool-title">
+      <header class="section-head">
+        <p class="stop-label"><span class="num">5</span> Try the tool</p>
+        <h2 id="tool-title">Some design decisions only need to be made once</h2>
+      </header>
+      <div class="cols">
+        <div class="prose">
+          <p>A recurring promotion shouldn't require someone to rebuild the layout or work out the type hierarchy every time.</p>
+          <p>We'll show how an approved design can become an editable tool: change the headline, swap the photo, update the details, and keep the underlying design decisions in place. For the right tasks, that gives your team more control and a quicker starting point. It also lets us build tools around the way you work, rather than asking every contributor to become a designer.</p>
+          <p><strong>Try a sample:</strong> edit the headline, image, and event details to see how a coded template responds.</p>
+        </div>
+      </div>
+
+      <div class="tool" id="template-tool">
+        <form class="tool-controls" id="tool-form" autocomplete="off">
+          <label>Headline
+            <input type="text" name="headline" maxlength="70" value="Dive-in movie night" />
+          </label>
+          <label>Date
+            <input type="text" name="date" maxlength="40" value="Friday, July 17" />
+          </label>
+          <label>Details
+            <input type="text" name="details" maxlength="80" value="Gates at 7 pm · Floats provided" />
+          </label>
+          <fieldset>
+            <legend>Image</legend>
+            <div class="tool-images" id="tool-images"></div>
+            <label class="upload">Or use your own photo <input type="file" name="upload" accept="image/*" /></label>
+          </fieldset>
+          <fieldset>
+            <legend>Approved colors</legend>
+            <div class="swatches" id="tool-swatches"></div>
+          </fieldset>
+          <button type="button" class="btn btn-ink" id="tool-export">Download PNG</button>
+        </form>
+        <figure class="tool-preview">
+          <canvas id="tool-canvas" width="1080" height="1350" aria-label="Live preview of the template"></canvas>
+          <figcaption>Demonstration layout only, using sample photos from waterworldcolorado.com. Final templates are designed during the engagement.</figcaption>
+        </figure>
+      </div>
+
+      <div class="cols ai">
+        <div class="prose">
+          <h3 class="sub">A foundation for more useful AI</h3>
+          <p>Clear standards can also give AI-assisted workflows a better foundation. Over time, an approved collection of rules, assets, templates, and examples could help your team prepare variations, check work against the standards, and get routine production tasks moving faster.</p>
+          <p>We think of that as building toward a brand-aware assistant: tools that understand the approved system and support the people using it. Designers still shape the ideas and the visual decisions. Your marketing team still approves what goes out.</p>
+          <p>A useful first step is a constrained template with dependable controls. From there, we can identify where automation would save time or open up creative possibilities, and test those opportunities against actual tasks.</p>
+          <p class="fine">The proposal includes a demonstration of the concept. A production template tool, AI integration, asset library, hosting, and ongoing maintenance would be scoped separately. The $10,000 standards engagement includes the Canva and Adobe deliverables described below.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── 6 · Scope & pricing ───────────── -->
+    <section class="section tint" id="pricing" aria-labelledby="pricing-title">
+      <header class="section-head">
+        <p class="stop-label"><span class="num sun">6</span> Scope &amp; pricing</p>
+        <h2 id="pricing-title">A useful foundation for the next season</h2>
+      </header>
+      <div class="fee">
+        <div><p class="fee-label">Fixed project fee</p><p class="fee-value">$10,000</p></div>
+        <p>The base engagement covers discovery, the visual system, comprehensive standards, sample applications, editable templates, and handoff.</p>
+      </div>
+
+      <h3 class="sub">Included deliverables</h3>
+      <div class="table-wrap"><table>
+        <thead><tr><th scope="col">Component</th><th scope="col">Included scope</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Discovery and audit</th><td>One 90-minute kickoff workshop; focused stakeholder input; review of a representative materials set; concise findings and priorities</td></tr>
+          <tr><th scope="row">Typography system</th><td>Primary, secondary, and supporting/display roles as appropriate; hierarchy; channel guidance for social, ads, web, email, print, signage, and video/motion; readability, accessibility, licensing, and substitute-font instructions</td></tr>
+          <tr><th scope="row">Existing logo standards</th><td>Primary and applicable secondary configurations; one-color and reversed use; clear space; minimum size; placement; backgrounds; incorrect uses; co-branding</td></tr>
+          <tr><th scope="row">Color system</th><td>Primary, supporting, and applicable accent colors; combinations; HEX, RGB, CMYK, and Pantone where applicable; accessible text/background combinations</td></tr>
+          <tr><th scope="row">Graphic system</th><td>A focused suite of reusable supporting graphics and guidance for shapes, patterns, textures, illustration, iconography, frames, and backgrounds as applicable to the selected direction</td></tr>
+          <tr><th scope="row">Photography and video direction</th><td>Subject matter, guest representation, attraction/lifestyle imagery, composition, movement, lighting, color treatment, drone imagery, authentic/staged content, titles, overlays, and social-first use</td></tr>
+          <tr><th scope="row">Social and digital guidance</th><td>Feed, Stories, Reels/vertical video, paid Meta, display, email, website graphics, promotional campaigns, and events</td></tr>
+          <tr><th scope="row">Print and environmental guidance</th><td>Posters/flyers, outdoor advertising, banners, park/promotional/event signage, and printed collateral; hierarchy, scale, and viewing-distance considerations</td></tr>
+          <tr><th scope="row">Basic voice guidance</th><td>Personality, tone, messaging characteristics, headlines, calls to action, humor, and promotional/informational/operational distinctions</td></tr>
+          <tr><th scope="row">Final standards guide</th><td>Comprehensive PDF with specifications, examples, practical instructions, and common mistakes</td></tr>
+          <tr><th scope="row">Production-ready assets</th><td>Approved logo exports from supplied source files, supporting vector/raster graphics, color references, and legally distributable font files with installation and sourcing instructions; organized folders for internal and partner use</td></tr>
+          <tr><th scope="row">Training and transition</th><td>One 60-minute staff/partner walkthrough, recorded with agreement; priority rollout recommendations and asset organization guidance</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3 class="sub">Sample applications and editable templates</h3>
+      <p class="prose narrow">The examples below demonstrate the system. Four layouts are also supplied as editable templates. Each template is delivered in Canva and its specified Adobe format, for eight editable files/designs in total.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th scope="col">Application</th><th scope="col">Included example</th><th scope="col">Editable template</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Organic social</th><td>Instagram/Facebook feed graphic</td><td>One feed layout in Canva and Adobe Illustrator</td></tr>
+          <tr><th scope="row">Paid social</th><td>Paid Meta advertisement</td><td>One ad layout in Canva and Adobe Illustrator</td></tr>
+          <tr><th scope="row">Instagram Stories/Reels</th><td>Story graphic and static vertical-video title/overlay example</td><td>One Story layout in Canva and Adobe Illustrator</td></tr>
+          <tr><th scope="row">Email</th><td>Header and representative email composition</td><td>Example only; email coding is separate</td></tr>
+          <tr><th scope="row">Digital display</th><td>Representative display ad</td><td>Example only</td></tr>
+          <tr><th scope="row">Poster or flyer</th><td>Representative print layout</td><td>One layout in Canva and Adobe InDesign</td></tr>
+          <tr><th scope="row">Outdoor advertising</th><td>Billboard example</td><td>Example only</td></tr>
+          <tr><th scope="row">Park signage</th><td>Representative sign</td><td>Example only; fabrication and installed sign refreshes are separate</td></tr>
+          <tr><th scope="row">Website graphics</th><td>Representative promotional graphic</td><td>Example only; website implementation is separate</td></tr>
+        </tbody>
+      </table></div>
+
+      <div class="cols">
+        <div class="prose">
+          <h3 class="sub">Reviews and revisions</h3>
+          <p>The fee includes two focused approaches at the initial presentation, followed by development of one selected direction. It includes <strong>two consolidated revision rounds on that direction</strong>, plus <strong>one consolidated correction round on the assembled guide and templates</strong>.</p>
+          <p>A round means one combined feedback submission from Water World's marketing lead. The correction round resolves documentation, consistency, and usability issues in the approved system. New directions, additional application families, or changes to previously approved work are scoped before work proceeds. Anchovies will correct its own delivery errors without treating them as added scope.</p>
+        </div>
+        <div>
+          <h3 class="sub">Payment schedule</h3>
+          <ol class="payments">
+            <li><span class="pct">50%</span><span class="when">Upfront, on engagement approval, before kickoff</span><span class="amt">$5,000</span></li>
+            <li><span class="pct">25%</span><span class="when">Milestone, on written approval of the visual direction after the included direction revisions</span><span class="amt">$2,500</span></li>
+            <li><span class="pct">25%</span><span class="when">Final, on delivery of the complete agreed guide, assets, and templates, with the handoff session completed</span><span class="amt">$2,500</span></li>
+            <li class="total"><span class="pct">Total</span><span class="when"></span><span class="amt">$10,000</span></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="cols">
+        <div class="prose">
+          <h3 class="sub">Fonts, expenses, and support</h3>
+          <p>We propose using suitable license-free fonts so no additional font purchase is needed in the base scope. Any optional paid-font recommendation will identify the cost, required licenses, and Canva/Adobe availability before approval. Font files will only be distributed where the license permits it; otherwise, we'll provide the authorized source and installation instructions.</p>
+          <p>Delivery is remote, with no planned travel or reimbursable expenses. Any requested travel or third-party purchases will be quoted before approval.</p>
+          <p>Additional work is quoted in advance. Optional ongoing support is available, with the rate, scope, and estimated effort agreed before work begins.</p>
+        </div>
+        <div class="prose">
+          <h3 class="sub">Optional next steps</h3>
+          <ul class="ticks">
+            <li><strong>Production template tool:</strong> turn selected layouts into a maintained editing and export workflow for recurring tasks.</li>
+            <li><strong>Brand-aware AI pilot:</strong> test a specific workflow, such as preparing controlled variations or checking materials against approved rules, with human review and agreed asset/data handling.</li>
+            <li><strong>Additional template families:</strong> expand the library around the team's most frequent requests.</li>
+            <li><strong>Seasonal campaign development:</strong> apply the system to a defined campaign, with agreed channels and deliverables.</li>
+            <li><strong>Implementation support:</strong> refresh selected existing materials or help partners adopt the system.</li>
+          </ul>
+          <p class="fine">These are separately scoped and priced after the requirements are defined. No optional service is needed to use the base deliverables.</p>
+        </div>
+      </div>
+      <aside class="exclusions" aria-labelledby="excl-title">
+        <div class="excl-head">
+          <span class="excl-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></span>
+          <h4 id="excl-title">Not included in the base engagement</h4>
+        </div>
+        <ul class="excl-list">
+          <li>Extensive consumer research</li><li>A new logo</li><li>A new mascot program</li><li>Comprehensive positioning</li>
+          <li>Photography/video production</li><li>A complete asset or signage refresh</li><li>Website/email development</li>
+          <li>Fabrication</li><li>A production software service</li>
+        </ul>
+        <p>Any significant logo-change recommendation would be presented separately with its rationale.</p>
+      </aside>
+
+      <h3 class="sub">Proposed schedule</h3>
+      <p class="prose narrow"><strong>Target final delivery: December 23, 2026</strong>, ahead of Water World's end-of-year requirement. This schedule assumes selection on November 16, kickoff on November 18, source materials available at kickoff, and consolidated feedback within two business days of each review. We'll confirm stakeholder availability around Thanksgiving and December holidays at kickoff.</p>
+      <div class="sched" role="img" aria-label="Project timeline from kickoff on November 18 to final delivery on December 23, 2026, in five phases.">
+        <div class="sched-axis" aria-hidden="true">
+          <span class="m" style="left:0%">Nov</span><span class="m" style="left:29.55%">Dec</span>
+          <span class="w first" style="left:0.0%">18</span><span class="w" style="left:11.36%">23</span><span class="w" style="left:27.27%">30</span><span class="w" style="left:43.18%">7</span><span class="w" style="left:59.09%">14</span><span class="w" style="left:75.0%">21</span><span class="w" style="left:90.91%">28</span>
+        </div>
+        <div class="sched-track" aria-hidden="true">
+          <span class="grid" style="left:11.36%"></span><span class="grid" style="left:27.27%"></span><span class="grid" style="left:43.18%"></span><span class="grid" style="left:59.09%"></span><span class="grid" style="left:75.0%"></span><span class="grid" style="left:90.91%"></span>
+          <span class="holiday" style="left:18.18%;width:11.37%"><em>Thanksgiving</em></span>
+          <span class="bar b1" style="left:0.0%;width:15.91%">Discover</span>
+          <span class="bar b2" style="left:15.91%;width:22.73%">Explore</span>
+          <span class="bar b1" style="left:43.18%;width:11.37%">Refine</span>
+          <span class="bar b2" style="left:59.09%;width:11.36%">Build</span>
+          <span class="bar b3" style="left:75.0%;width:6.82%">Deliver</span>
+          <span class="cushion" style="left:81.82%;width:18.18%">Cushion</span>
+          <span class="pin first" style="left:1.14%"><b>Nov 18</b>Kickoff</span>
+          <span class="pin" style="left:37.5%"><b>Dec 4</b>Direction presentation</span>
+          <span class="pin" style="left:53.41%"><b>Dec 11</b>Written approval</span>
+          <span class="pin" style="left:69.32%"><b>Dec 18</b>Draft handoff</span>
+          <span class="pin final" style="left:80.68%"><b>Dec 23</b>Final delivery</span>
+        </div>
+      </div>
+      <ol class="timeline">
+        <li><p class="when"><span class="dot b1"></span>Nov 18–24</p><h4>Discover</h4><p>Kickoff, stakeholder input, materials audit, historical review, and priority confirmation.</p></li>
+        <li><p class="when"><span class="dot b2"></span>Nov 25–Dec 4</p><h4>Explore</h4><p>Typography and visual exploration, planned around Thanksgiving. Direction presentation on December 4.</p></li>
+        <li><p class="when"><span class="dot b1"></span>Dec 7–11</p><h4>Refine</h4><p>Two consolidated direction revision rounds. Written approval targeted for December 11, which triggers the milestone payment.</p></li>
+        <li><p class="when"><span class="dot b2"></span>Dec 14–18</p><h4>Build</h4><p>Sample applications, editable templates, supporting assets, and the assembled guide. Draft handoff package on December 18.</p></li>
+        <li class="final"><p class="when"><span class="dot b3"></span>Dec 21–23</p><h4>Deliver</h4><p>Consolidated correction round, usability review, training, transition recommendations, and final delivery.</p></li>
+      </ol>
+      <p class="fine wide disclaimer">The period from December 24 through year-end provides a small calendar cushion. A later kickoff, delayed feedback, or a scope change may move delivery; we'll agree any resulting schedule adjustment explicitly.</p>
+
+      <h3 class="sub">What we'll need from Water World</h3>
+      <ul class="ticks two">
+        <li>A marketing lead who consolidates feedback and confirms approvals, with park leadership involved at the agreed checkpoints.</li>
+        <li>Current logo source files, known font licenses, existing brand assets, and representative recent work from internal and external contributors.</li>
+        <li>Available historical materials and existing guest research or feedback, if useful. New consumer research is not required for this scope.</li>
+        <li>Input from the internal designer, a social/content contributor, and an agency representative on everyday production needs.</li>
+        <li>Confirmation of Canva/Adobe access and intended users so we can test the handoff appropriately.</li>
+        <li>Attendance at kickoff, the direction presentation, review checkpoints, and training, plus timely consolidated feedback.</li>
+      </ul>
+    </section>
+
+    <!-- ───────────── 7 · Your questions ───────────── -->
+    <section class="section" id="questions" aria-labelledby="questions-title">
+      <header class="section-head">
+        <p class="stop-label"><span class="num">7</span> Your questions</p>
+        <h2 id="questions-title">Eight good questions, answered</h2>
+      </header>
+      <div class="qa">
+        <details open><summary><span class="qn">1</span>Based on your experience, what separates a useful brand standards guide from one that ultimately sits unused?</summary>
+          <p>A useful guide answers the questions people encounter while making things. It tells someone which font to use, how much flexibility a campaign has, where the approved assets live, and what to do when a preferred font or format isn't available.</p>
+          <p>We'll pair the specifications with realistic applications, editable templates, common mistakes, and a walkthrough. We'll test whether contributors can find what they need and use it. The guide should reduce uncertainty in everyday work.</p></details>
+        <details><summary><span class="qn">2</span>How would you approach refining an established brand without making it feel like a complete rebrand?</summary>
+          <p>We'll begin by identifying the elements that already carry equity. Jenny identified the logo as the strongest recognizable asset, so our work starts by clarifying its use and improving the system around it.</p>
+          <p>Historical materials can inform typography, graphic choices, or attitude where those references are useful today. We'll be selective: each choice needs to work for current audiences and production needs. Any recommendation for a significant logo modification would be explained and scoped separately.</p></details>
+        <details><summary><span class="qn">3</span>How do you develop a visual identity that remains recognizable while allowing enough flexibility for seasonal campaigns, events and promotions?</summary>
+          <p>We'll define the constants: approved logo use, typography roles, palette relationships, and a focused graphic language. Then we'll show where campaigns can change, including image choice, layout, emphasis, supporting colors, and expressive details.</p>
+          <p>Examples will demonstrate those choices across family, group, tourist, and young-adult communications. Contributors will have clear boundaries and enough room to make work appropriate to the message.</p></details>
+        <details><summary><span class="qn">4</span>How would you approach Water World's current typography inconsistency?</summary>
+          <p>We'll inventory the fonts and treatments currently in use, identify practical constraints, and establish a small hierarchy with defined roles. We'll test it with real headlines, promotional details, body copy, calls to action, and viewing conditions.</p>
+          <p>The recommendations will address Canva and Adobe availability, web and email compatibility, licensing, readable sizing, and substitutes. Clear instructions will help the internal team and partners make the same choices across channels.</p></details>
+        <details><summary><span class="qn">5</span>How do you account for the different needs of professional designers, marketing staff, social media teams and external agencies when developing brand standards?</summary>
+          <p>The same system needs different levels of explanation. Designers and agencies need precise specifications and adaptable source assets. Marketing and social contributors need quick guidance, examples, and templates for recurring work. Vendors need production specifications and correct exports.</p>
+          <p>We'll organize those resources around common tasks and test them with representative users. A custom template tool could later support constrained recurring tasks, while the base package remains usable in Canva and Adobe.</p></details>
+        <details><summary><span class="qn">6</span>What steps do you take to ensure a new visual system can be practically implemented across an organization?</summary>
+          <p>We'll involve the people producing and approving materials early, test the system on representative applications, and resolve platform and licensing questions before handoff.</p>
+          <p>We'll deliver organized assets, train staff and partners, and identify immediate priorities for new work. Longer-lived physical materials can transition at sensible replacement points. We'll recommend a named internal owner for the approved asset collection and a clear process for handling exceptions and updates.</p></details>
+        <details><summary><span class="qn">7</span>What involvement would you need from Water World staff during the project?</summary>
+          <p>We'll need a marketing lead to coordinate materials, combine feedback, and confirm decisions. The internal designer, social/content contributor, and agency representative should provide focused input at discovery and review the practical applications. Park leadership can participate at the checkpoints agreed during kickoff.</p>
+          <p>We propose a 90-minute kickoff, one direction presentation, two consolidated direction feedback rounds, one guide/template correction round, and a 60-minute training session. Access to current assets and feedback within two business days will support the December 23 target.</p></details>
+        <details><summary><span class="qn">8</span>Are there components you believe should be added to or removed from the proposed scope? Please explain.</summary>
+          <p>We recommend emphasizing usability testing, substitute-font guidance, asset organization, and staff/partner training. Those details help turn the standards into everyday working tools.</p>
+          <p>Jenny's clarification supports keeping extensive consumer research and existing asset/signage refreshes outside this engagement. Basic voice direction is useful, while comprehensive positioning would require its own scope.</p>
+          <p>We also recommend exploring a coded template tool and, eventually, a focused brand-aware AI workflow as optional next steps. The standards provide a useful foundation for those tools; each extension should earn its place by solving a real production problem.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h2>Let's get everyone working from the same set of decisions</h2>
+    <p>We'll help your team make clearer choices, give partners useful direction, and put more of Water World's existing character to work across the materials you're already creating.</p>
+    <div class="cta-row">
+      <a class="btn btn-sun" href="mailto:sean@anchovies.agency?subject=Water%20World%20brand%20standards%20proposal">Email Sean <span aria-hidden="true">→</span></a>
+      <a class="btn btn-outline-light" href="#pricing">Scope &amp; pricing</a>
+      <button class="btn btn-outline-light" type="button" onclick="window.print()">Print / save as PDF</button>
+    </div>
+    <p class="contact">Sean Ashlow · Founder &amp; Creative Director<br /><a href="mailto:sean@anchovies.agency">sean@anchovies.agency</a> · <a href="tel:+17204702577">720.470.2577</a> · <a href="https://anchovies.agency">anchovies.agency</a></p>
+    <p class="fine">Water World Visual Brand Standards &amp; Style Guide Proposal</p>
+  </footer>
+
+  <a class="sticky-pricing" href="#pricing">Scope &amp; pricing <span class="badge">$10K</span></a>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
