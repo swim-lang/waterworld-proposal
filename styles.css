@@ -83,7 +83,7 @@ p { margin: 0 0 1em; }
 .hero h1 { font-size: clamp(46px, 6vw, 84px); line-height: 1; color: var(--brand); margin-bottom: 26px; }
 .lede { font-size: 20px; line-height: 1.55; max-width: 34em; }
 .hero .cta-row { margin: 28px 0 22px; }
-.meta { font: 13px/1.6 var(--body); color: var(--muted); max-width: 46em; }
+.meta { font: 13px/1.6 var(--body); color: var(--muted); max-width: 32em; }
 
 .park { position: relative; overflow: hidden; }
 .park-stage { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
