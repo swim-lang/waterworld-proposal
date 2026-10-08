@@ -221,6 +221,19 @@ p { margin: 0 0 1em; }
 .pattern-opt:hover span { border-color: var(--splash); }
 .pattern-opt input:checked + span { border-color: var(--ink); background: var(--map); }
 .pattern-opt input:focus-visible + span { outline: 3px solid var(--splash); outline-offset: 2px; }
+.pattern-adjust { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 28px; margin-top: 14px; padding: 14px 16px; background: #fff; border: 2px solid var(--line); border-radius: 16px; }
+.pattern-adjust[hidden] { display: none; }
+.tool-controls .pattern-strength { flex-direction: row; align-items: center; gap: 12px; }
+.pattern-strength input[type=range] { width: 160px; accent-color: var(--ink); cursor: pointer; }
+.pattern-colors { display: flex; align-items: center; gap: 8px; }
+.pc-k { font: 600 14px var(--body); margin-right: 4px; }
+.tool-controls .pc { position: relative; display: block; cursor: pointer; }
+.pc input { position: absolute; opacity: 0; }
+.pc span { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 999px; border: 2px solid #fff; box-shadow: 0 0 0 1.5px var(--line); transition: transform .15s var(--ease); }
+.pc .pc-auto { width: auto; padding: 0 10px; font: 600 12px var(--body); background: var(--map); color: var(--ink); }
+.pc:hover span { transform: scale(1.08); }
+.pc input:checked + span { box-shadow: 0 0 0 2.5px var(--ink); }
+.pc input:focus-visible + span { outline: 3px solid var(--splash); outline-offset: 2px; }
 .tool-images { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 .tool-thumb { position: relative; cursor: pointer; }
 .tool-thumb input, .swatch input { position: absolute; opacity: 0; }

@@ -323,6 +323,20 @@
               <label class="pattern-opt"><input type="radio" name="pattern" value="waves" /><span><svg viewBox="0 0 48 32" aria-hidden="true"><rect x="1" y="1" width="46" height="30" rx="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M1 22 q5.75 -5 11.5 0 t11.5 0 t11.5 0 t11.5 0 V25 a6 6 0 0 1 -6 6 H7 a6 6 0 0 1 -6 -6z" fill="currentColor"/></svg>Wave edge</span></label>
               <label class="pattern-opt"><input type="radio" name="pattern" value="ripples" /><span><svg viewBox="0 0 48 32" aria-hidden="true"><rect x="1" y="1" width="46" height="30" rx="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 10 q4.5 -3 9 0 t9 0 t9 0 t9 0 M5 17 q4.5 -3 9 0 t9 0 t9 0 t9 0 M5 24 q4.5 -3 9 0 t9 0 t9 0 t9 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Ripples</span></label>
             </div>
+            <div class="pattern-adjust" id="pattern-adjust" hidden>
+              <label class="pattern-strength">Strength
+                <input type="range" name="patternStrength" min="0" max="100" value="50" />
+              </label>
+              <div class="pattern-colors" role="radiogroup" aria-label="Pattern color">
+                <span class="pc-k">Color</span>
+                <label class="pc" title="Match the palette"><input type="radio" name="patternColor" value="auto" checked /><span class="pc-auto">Auto</span></label>
+                <label class="pc" title="Water World blue"><input type="radio" name="patternColor" value="#005299" /><span style="background:#005299"></span></label>
+                <label class="pc" title="Sun"><input type="radio" name="patternColor" value="#FFC629" /><span style="background:#FFC629"></span></label>
+                <label class="pc" title="Splash"><input type="radio" name="patternColor" value="#2BA8E0" /><span style="background:#2BA8E0"></span></label>
+                <label class="pc" title="Shallows"><input type="radio" name="patternColor" value="#D9EFFB" /><span style="background:#D9EFFB"></span></label>
+                <label class="pc" title="White"><input type="radio" name="patternColor" value="#FFFFFF" /><span style="background:#FFFFFF"></span></label>
+              </div>
+            </div>
           </fieldset>
           <button type="button" class="btn btn-ink" id="tool-export">Download PNG</button>
         </form>

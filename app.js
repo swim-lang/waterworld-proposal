@@ -336,7 +336,7 @@ function buildTool() {
   const form = document.getElementById("tool-form");
   const canvas = document.getElementById("tool-canvas");
   const ctx = canvas.getContext("2d");
-  const state = { palette: 0, pattern: "none", image: null, imageIsPhoto: false };
+  const state = { palette: 0, pattern: "none", strength: 50, patternColor: "auto", image: null, imageIsPhoto: false };
   const logo = new Image(); logo.src = "assets/brand/water-world-logo.png";
 
   const imgWrap = document.getElementById("tool-images");
@@ -381,8 +381,9 @@ function buildTool() {
     const p = PALETTES[state.palette];
     const W = canvas.width, H = canvas.height, M = 64;
     ctx.fillStyle = p.bg; ctx.fillRect(0, 0, W, H);
-    if (state.pattern === "ripples") drawRipples(p, W, H);
-    if (state.pattern === "waves") drawWaveEdge(p, W, H);
+    const pc = state.patternColor === "auto" ? p.accent : state.patternColor;
+    if (state.pattern === "ripples") drawRipples(pc, W, H);
+    if (state.pattern === "waves") drawWaveEdge(pc, W, H);
 
     // image panel
     const ix = M, iy = M, iw = W - M * 2, ih = 700;
@@ -407,6 +408,13 @@ function buildTool() {
     // the wave edge takes the bottom of the post, so the headline gets two lines instead of three
     const head = fitHeadline(String(data.get("headline") || " "), iw, state.pattern === "waves" ? 2 : 3);
     let y = iy + ih + 64;
+    // keep the copy legible over a full-bleed pattern: calm the pattern behind the text block
+    if (state.pattern === "ripples") {
+      const top = iy + ih + 24, bottom = H - 30;
+      const g = ctx.createLinearGradient(0, top, 0, bottom);
+      g.addColorStop(0, hexA(p.bg, 0)); g.addColorStop(0.12, hexA(p.bg, 0.72)); g.addColorStop(0.88, hexA(p.bg, 0.72)); g.addColorStop(1, hexA(p.bg, 0));
+      ctx.fillStyle = g; ctx.fillRect(0, top, W, bottom - top);
+    }
     ctx.fillStyle = p.ink; ctx.textBaseline = "top";
     ctx.font = `900 ${head.size}px Fraunces`;
     head.lines.forEach((l) => { ctx.fillText(l, M, y); y += head.size * 1.0; });
@@ -424,20 +432,26 @@ function buildTool() {
     ctx.moveTo(-20, y);
     for (let x = -20; x <= W + 20; x += 8) ctx.lineTo(x, y + Math.sin((x / len) * Math.PI * 2 + phase) * amp);
   }
-  function drawRipples(p, W, H) {
+  function hexA(hex, a) {
+    const n = parseInt(hex.slice(1), 16);
+    return `rgba(${n >> 16}, ${(n >> 8) & 255}, ${n & 255}, ${a})`;
+  }
+  // strength 0–100 → ripples 6–40% opacity; the wave edge 35–100%
+  function drawRipples(color, W, H) {
     ctx.save();
-    ctx.strokeStyle = p.accent; ctx.globalAlpha = 0.16; ctx.lineWidth = 7; ctx.lineCap = "round";
+    ctx.strokeStyle = color; ctx.globalAlpha = 0.06 + (state.strength / 100) * 0.34; ctx.lineWidth = 7; ctx.lineCap = "round";
     for (let y = 20, i = 0; y < H + 40; y += 46, i++) {
       ctx.beginPath(); wavePath(y, 9, 132, i % 2 ? Math.PI : 0, W); ctx.stroke();
     }
     ctx.restore();
   }
-  function drawWaveEdge(p, W, H) {
+  function drawWaveEdge(color, W, H) {
     const layers = [[H - 128, 0.3, 0.4], [H - 96, 0.6, 1.9], [H - 62, 1, 3.3]];
+    const k = 0.35 + (state.strength / 100) * 0.65;
     ctx.save();
-    ctx.fillStyle = p.accent;
+    ctx.fillStyle = color;
     for (const [y, alpha, phase] of layers) {
-      ctx.globalAlpha = alpha;
+      ctx.globalAlpha = alpha * k;
       ctx.beginPath(); wavePath(y, 14, 260, phase, W); ctx.lineTo(W + 20, H); ctx.lineTo(-20, H); ctx.closePath(); ctx.fill();
     }
     ctx.restore();
@@ -451,7 +465,9 @@ function buildTool() {
 
   form.addEventListener("input", async (e) => {
     if (e.target.name === "palette") state.palette = Number(e.target.value);
-    if (e.target.name === "pattern") state.pattern = e.target.value;
+    if (e.target.name === "pattern") { state.pattern = e.target.value; document.getElementById("pattern-adjust").hidden = state.pattern === "none"; }
+    if (e.target.name === "patternStrength") state.strength = Number(e.target.value);
+    if (e.target.name === "patternColor") state.patternColor = e.target.value;
     if (e.target.name === "image") await setStockImage(e.target.value);
     draw();
   });
