@@ -34,7 +34,7 @@ p { margin: 0 0 1em; }
 .btn-outline { border-color: var(--ink); color: var(--ink); background: transparent; font-weight: 600; }
 .btn-outline-light { border-color: #fff; color: #fff; background: transparent; font-weight: 600; }
 .btn-ink { background: var(--ink); color: #fff; }
-/* buttons: one raised 3D style everywhere; hover presses the button down into its shadow */
+/* buttons: one raised 3D style everywhere; hover presses the button all the way down, leaving just its outline */
 .btn, .nav-cta, .nav-map, .sticky-pricing, .round { --lift: 4px; --shadow: var(--ink); box-shadow: var(--lift) var(--lift) 0 var(--shadow); transition: transform .12s var(--ease), box-shadow .12s var(--ease); }
 .btn-ink, .nav-cta, .sticky-pricing, .round-ink { --shadow: var(--sun); }
 .btn-outline-light { --shadow: #fff; }
@@ -43,8 +43,9 @@ p { margin: 0 0 1em; }
 .btn-outline-light { background: transparent; }
 .footer .btn-outline-light { background: #fff; }
 .round { --lift: 3px; }
-.btn:hover, .nav-cta:hover, .nav-map:hover, .sticky-pricing:hover, .round:not(:disabled):hover { transform: translate(calc(var(--lift) / 2), calc(var(--lift) / 2)); box-shadow: calc(var(--lift) / 2) calc(var(--lift) / 2) 0 var(--shadow); }
-.btn:active, .nav-cta:active, .nav-map:active, .sticky-pricing:active, .round:not(:disabled):active { transform: translate(var(--lift), var(--lift)); box-shadow: 0 0 0 var(--shadow); }
+.btn:hover, .nav-cta:hover, .nav-map:hover, .sticky-pricing:hover, .round:not(:disabled):hover,
+.btn:active, .nav-cta:active, .nav-map:active, .sticky-pricing:active, .round:not(:disabled):active { transform: translate(var(--lift), var(--lift)); box-shadow: inset 0 0 0 2px var(--shadow); }
+.btn-outline:hover, .btn-outline-light:hover, .nav-map:hover, .round:not(.round-ink):not(:disabled):hover { box-shadow: none; }
 .round:disabled { box-shadow: none; }
 .swatch span:first-of-type { transition: transform .15s var(--ease); }
 .swatch:hover span:first-of-type { transform: scale(1.08); }
