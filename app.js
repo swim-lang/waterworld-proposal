@@ -322,9 +322,9 @@ document.addEventListener("keydown", (e) => {
 
 const PALETTES = [
   { name: "Water World blue", bg: "#005299", ink: "#FFFFFF", accent: "#FFC629", panel: "#E3F4FC" },
-  { name: "Sun", bg: "#FFC629", ink: "#0A2A52", accent: "#005299", panel: "#FFFFFF" },
-  { name: "Splash", bg: "#2BA8E0", ink: "#0A2A52", accent: "#FFFFFF", panel: "#E3F4FC" },
-  { name: "Deep end", bg: "#0A2A52", ink: "#FFFFFF", accent: "#FFC629", panel: "#D9EFFB" },
+  { name: "Sun", bg: "#FFC629", ink: "#005299", accent: "#005299", panel: "#FFFFFF" },
+  { name: "Splash", bg: "#2BA8E0", ink: "#005299", accent: "#FFFFFF", panel: "#E3F4FC" },
+  { name: "Shallows", bg: "#D9EFFB", ink: "#005299", accent: "#2BA8E0", panel: "#FFFFFF" },
 ];
 // real Water World photography (from waterworldcolorado.com), so the demo looks like their own posts
 const TOOL_IMAGES = [
