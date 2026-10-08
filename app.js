@@ -33,11 +33,11 @@ const STOPS = [
   {
     n: 4, title: "Your team", section: "#team", slug: "04-alpine-springs-gondola", landmark: "Alpine Springs Express Gondola",
     map: { x: 305, y: 358, w: 230, h: 187 },
-    headline: "You'll work with the people doing the work",
+    headline: "Just as excited about Water World as your own team",
     body: "We're a small Denver studio, and we keep it that way on purpose: close relationships, direct access to Sean and the designers, and a studio inside the Oxford Hotel where we'd love to host you.",
     facts: [["Founder & CD", "Sean"], ["Illustrative AD", "Kira"], ["Art Director", "Logan"]],
     cta: "Meet the team",
-    teaser: "Sean, Kira, and Logan: the people presenting are the people doing the work.",
+    teaser: "Sean, Kira, and Logan: a small team that cares about Water World as much as you do.",
   },
   {
     n: 5, title: "Try the tool", section: "#tool", slug: "05-cowabunga-beach", landmark: "Cowabunga Beach",
@@ -58,7 +58,7 @@ const STOPS = [
     teaser: "A $10,000 fixed fee, a 50/25/25 payment schedule, and delivery by December 23.",
   },
   {
-    n: 7, title: "Why us", section: "#questions", slug: "07-lost-river-of-the-pharaohs", landmark: "Lost River of the Pharaohs",
+    n: 7, title: "Why us + Q&A", section: "#questions", slug: "07-lost-river-of-the-pharaohs", landmark: "Lost River of the Pharaohs",
     map: { x: 502, y: 643, w: 215, h: 177 },
     headline: "Why we'd make a good partner",
     body: "Four reasons we think we're a good fit, followed by straight answers to all eight of your questions.",
