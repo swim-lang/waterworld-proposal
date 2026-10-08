@@ -213,6 +213,14 @@ p { margin: 0 0 1em; }
 .tool-controls input[type=text]:focus { border-color: var(--brand); outline: none; }
 .tool-controls fieldset { border: 0; padding: 0; margin: 0; }
 .tool-controls legend { font: 600 14px var(--body); margin-bottom: 8px; }
+.patterns { display: flex; flex-wrap: wrap; gap: 10px; }
+.pattern-opt { position: relative; cursor: pointer; }
+.pattern-opt input { position: absolute; opacity: 0; }
+.pattern-opt span { display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px 8px 10px; border: 2px solid var(--line); border-radius: 999px; background: #fff; font: 600 14px var(--body); color: var(--ink); transition: border-color .15s var(--ease), background-color .15s var(--ease); }
+.pattern-opt svg { width: 36px; height: 24px; color: var(--splash); }
+.pattern-opt:hover span { border-color: var(--splash); }
+.pattern-opt input:checked + span { border-color: var(--ink); background: var(--map); }
+.pattern-opt input:focus-visible + span { outline: 3px solid var(--splash); outline-offset: 2px; }
 .tool-images { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
 .tool-thumb { position: relative; cursor: pointer; }
 .tool-thumb input, .swatch input { position: absolute; opacity: 0; }

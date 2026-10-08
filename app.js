@@ -336,7 +336,7 @@ function buildTool() {
   const form = document.getElementById("tool-form");
   const canvas = document.getElementById("tool-canvas");
   const ctx = canvas.getContext("2d");
-  const state = { palette: 0, image: null, imageIsPhoto: false };
+  const state = { palette: 0, pattern: "none", image: null, imageIsPhoto: false };
   const logo = new Image(); logo.src = "assets/brand/water-world-logo.png";
 
   const imgWrap = document.getElementById("tool-images");
@@ -381,6 +381,8 @@ function buildTool() {
     const p = PALETTES[state.palette];
     const W = canvas.width, H = canvas.height, M = 64;
     ctx.fillStyle = p.bg; ctx.fillRect(0, 0, W, H);
+    if (state.pattern === "ripples") drawRipples(p, W, H);
+    if (state.pattern === "waves") drawWaveEdge(p, W, H);
 
     // image panel
     const ix = M, iy = M, iw = W - M * 2, ih = 700;
@@ -402,7 +404,8 @@ function buildTool() {
 
     // headline, date, details
     const data = new FormData(form);
-    const head = fitHeadline(String(data.get("headline") || " "), iw, 3);
+    // the wave edge takes the bottom of the post, so the headline gets two lines instead of three
+    const head = fitHeadline(String(data.get("headline") || " "), iw, state.pattern === "waves" ? 2 : 3);
     let y = iy + ih + 64;
     ctx.fillStyle = p.ink; ctx.textBaseline = "top";
     ctx.font = `900 ${head.size}px Fraunces`;
@@ -416,6 +419,30 @@ function buildTool() {
     ctx.globalAlpha = 1;
   }
 
+  // water patterns, coloured from the chosen palette
+  function wavePath(y, amp, len, phase, W) {
+    ctx.moveTo(-20, y);
+    for (let x = -20; x <= W + 20; x += 8) ctx.lineTo(x, y + Math.sin((x / len) * Math.PI * 2 + phase) * amp);
+  }
+  function drawRipples(p, W, H) {
+    ctx.save();
+    ctx.strokeStyle = p.accent; ctx.globalAlpha = 0.16; ctx.lineWidth = 7; ctx.lineCap = "round";
+    for (let y = 20, i = 0; y < H + 40; y += 46, i++) {
+      ctx.beginPath(); wavePath(y, 9, 132, i % 2 ? Math.PI : 0, W); ctx.stroke();
+    }
+    ctx.restore();
+  }
+  function drawWaveEdge(p, W, H) {
+    const layers = [[H - 128, 0.3, 0.4], [H - 96, 0.6, 1.9], [H - 62, 1, 3.3]];
+    ctx.save();
+    ctx.fillStyle = p.accent;
+    for (const [y, alpha, phase] of layers) {
+      ctx.globalAlpha = alpha;
+      ctx.beginPath(); wavePath(y, 14, 260, phase, W); ctx.lineTo(W + 20, H); ctx.lineTo(-20, H); ctx.closePath(); ctx.fill();
+    }
+    ctx.restore();
+  }
+
   async function setStockImage(slug) {
     state.image = await loadImage(toolImg(slug));
     state.imageIsPhoto = true;
@@ -424,6 +451,7 @@ function buildTool() {
 
   form.addEventListener("input", async (e) => {
     if (e.target.name === "palette") state.palette = Number(e.target.value);
+    if (e.target.name === "pattern") state.pattern = e.target.value;
     if (e.target.name === "image") await setStockImage(e.target.value);
     draw();
   });
