@@ -563,3 +563,13 @@ html.js .stop-page .section-head.split { margin-bottom: 32px; }
   .project-media .thumbs { display: none; }
   a { text-decoration: none; }
 }
+
+/* section 2 breathing room: clear space between the intro and the process strip */
+#approach > .phase-steps { margin-top: 160px; }
+#approach > h3.sub { margin-top: 136px; }
+#approach > h3.sub + .phase-details { margin-top: 28px; }
+#approach > .stop-nav { margin-top: 136px; }
+@media (max-width: 760px) {
+  #approach > .phase-steps { margin-top: 64px; }
+  #approach > h3.sub { margin-top: 88px; }
+}
