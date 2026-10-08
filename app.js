@@ -259,8 +259,7 @@ function buildStopPages() {
         <p class="si-body">${s.body}</p>
         <dl class="si-facts">${s.facts.map(([k, v]) => `<div><dt>${k}</dt><dd>${v}</dd></div>`).join("")}</dl>
         <a class="btn btn-sun si-more" href="#${sec.id}-more">Keep reading <span aria-hidden="true">↓</span></a>
-      </div>
-      <p class="si-caption">Landmark: ${s.landmark}</p>`;
+      </div>`;
     sec.prepend(intro);
     const anchor = document.createElement("span");
     anchor.id = `${sec.id}-more`;

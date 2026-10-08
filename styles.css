@@ -430,7 +430,6 @@ html.js .stop-page .section-head.split { margin-bottom: 32px; }
 .si-facts { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 0 32px; border-top: 2px solid var(--ink); padding-top: 14px; margin: 24px 0 28px; }
 .si-facts dt { font: 600 12px var(--body); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
 .si-facts dd { margin: 4px 0 0; font: 900 30px/1.1 var(--display); white-space: nowrap; }
-.si-caption { grid-column: 1; grid-row: 2; font: 13px var(--body); color: var(--muted); margin: 0; }
 .si-anchor { display: block; position: relative; top: -90px; }
 .stop-nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-top: 72px; padding-top: 28px; border-top: 2px solid var(--ink); }
 .stop-nav a { display: flex; flex-direction: column; gap: 4px; text-decoration: none; }
@@ -441,14 +440,13 @@ html.js .stop-page .section-head.split { margin-bottom: 32px; }
 
 @media (max-width: 860px) {
   .stop-intro { grid-template-columns: 1fr; grid-template-rows: auto; min-height: 0; }
-  .si-stage, .si-content, .si-caption { grid-column: 1; grid-row: auto; }
+  .si-stage, .si-content { grid-column: 1; grid-row: auto; }
   .si-stage { min-height: 250px; height: 36vh; }
   .si-content { padding: 8px 0 0; max-width: none; }
   .si-content h1 { font-size: 36px; }
   .si-facts { gap: 0 18px; }
   .si-facts dd { font-size: 21px; }
   .si-more { width: 100%; }
-  .si-caption { margin-top: 12px; }
   .stop-nav .v { font-size: 18px; }
   .stop-nav .sv-dots { display: none; }
 }
@@ -584,7 +582,7 @@ html.js .stop-page .section-head.split { margin-bottom: 32px; }
 .ai-lede { font-size: 22px; line-height: 1.5; margin: 0; padding-left: 22px; border-left: 4px solid var(--sun); }
 .ai-body p { font-size: 17px; line-height: 1.6; margin: 0 0 16px; }
 .ai-body p:last-child { margin-bottom: 0; }
-.section > .ai-note { margin-top: 40px; }
+.ai-body .ai-note { font-size: 13px; line-height: 1.55; margin-top: 24px; max-width: none; }
 @media (max-width: 860px) {
   .ai-layout { grid-template-columns: 1fr; }
   .ai-lede { font-size: 19px; }
