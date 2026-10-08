@@ -608,3 +608,17 @@ html.js .stop-page .section-head.split { margin-bottom: 32px; }
   .ai-layout { grid-template-columns: 1fr; }
   .ai-lede { font-size: 19px; }
 }
+
+/* scope & pricing: payment card, needs panel */
+.pay-card { background: var(--map); border-radius: 24px; padding: 30px 32px 22px; }
+.pay-card .sub { margin-top: 0; }
+.pay-card .payments li { border-bottom-color: rgba(0,82,153,.18); }
+.section > .needs { margin-top: 96px; }
+.needs { background: #fff4cc; border-radius: 24px; padding: 34px 36px 26px; }
+.needs .sub { margin: 0 0 20px; }
+.needs .ticks.two { max-width: none; }
+.needs .ticks li::marker { color: var(--ink); }
+@media (max-width: 760px) {
+  .pay-card, .needs { padding: 24px 20px 16px; }
+  .section > .needs { margin-top: 64px; }
+}
