@@ -622,3 +622,24 @@ html.js .stop-page .section-head.split { margin-bottom: 32px; }
   .pay-card, .needs { padding: 24px 20px 16px; }
   .section > .needs { margin-top: 64px; }
 }
+
+/* header: next stop */
+.nav-next .nn-short { display: none; }
+@media (max-width: 760px) { .nav-next .nn-label { display: none; } .nav-next .nn-short { display: inline; } }
+@media print { .nav-next { display: none !important; } }
+
+/* selected work: link out */
+.work-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; border-top: 2px solid var(--ink); padding-top: 28px; }
+.work-cta p { font: 900 26px var(--display); margin: 0; }
+
+/* why us */
+.why { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.why li { background: var(--map); border-radius: 24px; padding: 28px 30px 30px; }
+.why li:nth-child(2) { background: #fff4cc; }
+.why li:nth-child(3) { background: var(--ink); color: #fff; }
+.why li:nth-child(3) h3, .why li:nth-child(3) .why-n { color: #fff; }
+.why li:nth-child(4) { background: #fff; border: 2px solid var(--ink); }
+.why-n { display: block; font: 600 13px var(--body); letter-spacing: .08em; color: var(--muted); margin-bottom: 10px; }
+.why h3 { font: 900 26px/1.15 var(--display); color: var(--ink); margin: 0 0 10px; }
+.why p { font-size: 17px; line-height: 1.55; margin: 0; }
+@media (max-width: 760px) { .why { grid-template-columns: 1fr; } .why li { padding: 22px 20px 24px; } .work-cta p { font-size: 22px; } }

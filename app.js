@@ -7,8 +7,8 @@ const STOPS = [
     n: 1, title: "Start here", section: "#start", slug: "01-entrance-gate", landmark: "Main entrance",
     map: { x: 120, y: 88, w: 220, h: 182 },
     headline: "Everybody working from the same Water World",
-    body: "Different contributors are using different fonts, styles, and treatments. We'll build a shared system around the strongest parts of the existing brand, with particular attention to typography.",
-    facts: [["Kickoff", "Nov 18"], ["Delivery", "Dec 23"], ["Focus", "Typography"]],
+    body: "Different contributors are using different fonts, layouts, motifs, and versions of the mascot. We'll build one design system around the strongest parts of the existing brand, with a clear, logical answer for what to use and when.",
+    facts: [["Kickoff", "Nov 18"], ["Delivery", "Dec 23"], ["Focus", "Design system"]],
     cta: "Read the intro",
     teaser: "Why we're here, what we heard from your team, and what should get easier.",
   },
@@ -16,8 +16,8 @@ const STOPS = [
     n: 2, title: "Our approach", section: "#approach", slug: "02-lazy-river", landmark: "Lazy River",
     map: { x: 485, y: 126, w: 250, h: 144 },
     headline: "Get the basics working. Then see what they make possible.",
-    body: "Four phases: understand the starting point, develop the system, put it to work, and make the handoff useful.",
-    facts: [["Phases", "4"], ["Kickoff", "90 min"], ["Training", "60 min"]],
+    body: "We look as closely at the outcomes you want as at the problems in front of you. Then four phases: understand the starting point, develop the system, put it to work, and make the handoff useful.",
+    facts: [["Phases", "4"], ["Kickoff", "3 hours"], ["Training", "60 min"]],
     cta: "See our approach",
     teaser: "Four phases, from a kickoff workshop to a handoff your team can actually use.",
   },
@@ -25,7 +25,7 @@ const STOPS = [
     n: 3, title: "Selected work", section: "#work", slug: "03-slide-tower", landmark: "Slide tower",
     map: { x: 25, y: 300, w: 210, h: 245 },
     headline: "A few things we've enjoyed making",
-    body: "Our work often involves illustration, characters, and expressive visual ideas. These projects show how those ideas become a system people can use.",
+    body: "We're serious about fun. These projects show how expressive ideas, characters, and illustration become systems people can actually use.",
     facts: [["Projects", "3"], ["Each shows", "System + uses"], ["Sectors", "Retail"]],
     cta: "Browse the work",
     teaser: "Tagawa Gardens, Moat, and Freddie: one idea carried through a whole system.",
@@ -34,7 +34,7 @@ const STOPS = [
     n: 4, title: "Your team", section: "#team", slug: "04-alpine-springs-gondola", landmark: "Alpine Springs Express Gondola",
     map: { x: 305, y: 358, w: 230, h: 187 },
     headline: "You'll work with the people doing the work",
-    body: "Anchovies is a boutique Denver agency. You'll have direct access to Sean and the designers developing the system, from the first review through the final handoff.",
+    body: "We're a small Denver studio, and we keep it that way on purpose: close relationships, direct access to Sean and the designers, and a studio inside the Oxford Hotel where we'd love to host you.",
     facts: [["Founder & CD", "Sean"], ["Illustrative AD", "Kira"], ["Art Director", "Logan"]],
     cta: "Meet the team",
     teaser: "Sean, Kira, and Logan: the people presenting are the people doing the work.",
@@ -43,10 +43,10 @@ const STOPS = [
     n: 5, title: "Try the tool", section: "#tool", slug: "05-cowabunga-beach", landmark: "Cowabunga Beach",
     map: { x: 600, y: 358, w: 220, h: 187 },
     headline: "Some design decisions only need to be made once",
-    body: "A recurring promotion shouldn't require rebuilding the layout every time. Edit a headline, image, and event details to see how a coded template responds.",
-    facts: [["Edit", "Headline"], ["Swap", "Photo"], ["Update", "Details"]],
+    body: "We're building our own software for managing design systems. In this sample, you change the content and the tool keeps the design on-brand.",
+    facts: [["You change", "Content"], ["It protects", "The design"], ["Built", "In-house"]],
     cta: "Try a sample",
-    teaser: "Edit a headline, swap a photo, and watch a coded template keep the design in place.",
+    teaser: "A taste of the software we're building: change the content, and the design stays on-brand.",
   },
   {
     n: 6, title: "Scope & Pricing", section: "#pricing", slug: "06-thunder-bay", landmark: "Thunder Bay wave pool",
@@ -58,13 +58,13 @@ const STOPS = [
     teaser: "A $10,000 fixed fee, a 50/25/25 payment schedule, and delivery by December 23.",
   },
   {
-    n: 7, title: "Your questions", section: "#questions", slug: "07-lost-river-of-the-pharaohs", landmark: "Lost River of the Pharaohs",
+    n: 7, title: "Why us", section: "#questions", slug: "07-lost-river-of-the-pharaohs", landmark: "Lost River of the Pharaohs",
     map: { x: 502, y: 643, w: 215, h: 177 },
-    headline: "Eight good questions, answered",
-    body: "Every question from the RFP, answered plainly: from what makes a standards guide useful to how we'd approach the typography.",
-    facts: [["Questions", "8"], ["Answered", "All 8"], ["Jargon", "None"]],
-    cta: "Read the answers",
-    teaser: "Straight answers to all eight of your questions.",
+    headline: "Why we'd make a good partner",
+    body: "Four reasons we think we're a good fit, followed by straight answers to all eight of your questions.",
+    facts: [["Reasons", "4"], ["Questions", "All 8"], ["Based in", "Denver"]],
+    cta: "See why",
+    teaser: "Four reasons we'd make a good partner, plus answers to all eight of your questions.",
   },
 ];
 
@@ -239,6 +239,7 @@ phone.addEventListener("change", applyLayout);
 
 const home = document.getElementById("home");
 const navMap = document.querySelector(".nav-map");
+const navNext = document.querySelector(".nav-next");
 const sections = STOPS.map((s) => document.querySelector(s.section));
 let pageViewer = null;
 let currentStop = 0;
@@ -286,6 +287,7 @@ function route() {
     home.hidden = false;
     sections.forEach((sec) => sec.classList.remove("is-current"));
     navMap.hidden = true;
+    navNext.hidden = true;
     document.title = "Water World × Anchovies · Visual Brand Standards Proposal";
     window.scrollTo(0, 0);
     return;
@@ -295,6 +297,14 @@ function route() {
   home.hidden = true;
   sections.forEach((el) => el.classList.toggle("is-current", el === sec));
   navMap.hidden = false;
+  // next stop sits between "Park map" and "Scope & Pricing" so nobody has to scroll to move on
+  const next = STOPS[n];
+  navNext.hidden = !next;
+  if (next) {
+    navNext.href = next.section;
+    navNext.querySelector(".nn-title").textContent = next.title;
+    navNext.setAttribute("aria-label", `Next stop: ${next.n} · ${next.title}`);
+  }
   document.title = `${s.n} · ${s.title} · Water World × Anchovies`;
   window.scrollTo(0, 0);
   sec.classList.remove("has-3d");
