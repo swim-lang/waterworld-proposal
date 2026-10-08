@@ -289,7 +289,7 @@ tbody th { font-weight: 700; width: 26%; }
 
 /* footer */
 .footer { background: var(--map); color: var(--ink); padding: clamp(64px, 9vw, 110px) var(--pad) 48px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 48px; align-items: center; }
-.footer-sun { width: clamp(160px, 22vw, 300px); height: auto; justify-self: end; -webkit-mask-image: radial-gradient(closest-side, #000 80%, transparent 100%); mask-image: radial-gradient(closest-side, #000 80%, transparent 100%); }
+.footer-sun { width: clamp(200px, 28vw, 380px); height: auto; justify-self: end; align-self: end; transform: translateY(12%); /* glow sits below the disc; nudge so the sun itself lines up with the last line of text */ -webkit-mask-image: radial-gradient(closest-side, #000 80%, transparent 100%); mask-image: radial-gradient(closest-side, #000 80%, transparent 100%); }
 @media (max-width: 760px) { .footer { grid-template-columns: 1fr; } .footer-sun { order: -1; justify-self: start; width: 96px; } }
 .footer h2 { font-size: clamp(38px, 5vw, 64px); line-height: 1.04; max-width: 14em; color: var(--ink); margin-bottom: 20px; }
 .footer-main > p { max-width: 40em; color: var(--ink); }
