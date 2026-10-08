@@ -192,8 +192,8 @@ p { margin: 0 0 1em; }
 .thumbs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
 .thumbs img { width: 100%; aspect-ratio: 268 / 200; object-fit: cover; border-radius: 14px; }
 
-.people { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
-.people li { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 22px 24px; }
+.people { list-style: none; padding: 0; margin: 0; display: grid; gap: 36px; }
+.people li { padding: 0; }
 .people li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 24px; align-items: center; }
 .polaroid { width: 112px; height: auto; transform: rotate(-3deg); filter: drop-shadow(0 6px 10px rgba(0,82,153,.18)); }
 .people li:nth-child(2) .polaroid { transform: rotate(2.5deg); }
