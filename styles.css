@@ -643,3 +643,14 @@ html.js .stop-page .section-head.split { margin-bottom: 32px; }
 .why h3 { font: 900 26px/1.15 var(--display); color: var(--ink); margin: 0 0 10px; }
 .why p { font-size: 17px; line-height: 1.55; margin: 0; }
 @media (max-width: 760px) { .why { grid-template-columns: 1fr; } .why li { padding: 22px 20px 24px; } .work-cta p { font-size: 22px; } }
+
+/* selected work: honest note + references */
+.work-note { border-left: 4px solid var(--sun); padding: 4px 0 4px 22px; max-width: 46em; }
+.work-note p:last-child { margin: 6px 0 0; }
+.refs { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.refs li { background: var(--map); border-radius: 20px; padding: 20px 22px; }
+.ref-name { font: 900 20px/1.2 var(--display); color: var(--ink); margin: 0; }
+.ref-biz { font: 600 12px var(--body); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 6px 0 12px; }
+.refs a { font-size: 15px; color: var(--ink); overflow-wrap: anywhere; }
+@media (max-width: 1240px) { .refs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .refs { grid-template-columns: 1fr; } }
