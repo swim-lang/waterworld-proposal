@@ -49,7 +49,7 @@ const STOPS = [
     teaser: "Edit a headline, swap a photo, and watch a coded template keep the design in place.",
   },
   {
-    n: 6, title: "Scope & pricing", section: "#pricing", slug: "06-thunder-bay", landmark: "Thunder Bay wave pool",
+    n: 6, title: "Scope & Pricing", section: "#pricing", slug: "06-thunder-bay", landmark: "Thunder Bay wave pool",
     map: { x: 100, y: 661, w: 260, h: 159 },
     headline: "A useful foundation for the next season",
     body: "The base engagement covers discovery, the visual system, comprehensive standards, sample applications, editable templates, and handoff.",
