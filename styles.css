@@ -45,7 +45,7 @@ p { margin: 0 0 1em; }
 .round { --lift: 3px; }
 .btn:hover, .nav-cta:hover, .nav-map:hover, .sticky-pricing:hover, .round:not(:disabled):hover,
 .btn:active, .nav-cta:active, .nav-map:active, .sticky-pricing:active, .round:not(:disabled):active { transform: translate(var(--lift), var(--lift)); box-shadow: inset 0 0 0 2px var(--shadow); }
-.btn-outline:hover, .btn-outline-light:hover, .nav-map:hover, .round:not(.round-ink):not(:disabled):hover { box-shadow: none; }
+.btn-sun:hover, .btn-sun:active, .btn-outline:hover, .btn-outline-light:hover, .nav-map:hover, .round:not(.round-ink):not(:disabled):hover { box-shadow: none; }
 .round:disabled { box-shadow: none; }
 .swatch span:first-of-type { transition: transform .15s var(--ease); }
 .swatch:hover span:first-of-type { transform: scale(1.08); }
