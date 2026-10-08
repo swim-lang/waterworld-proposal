@@ -282,8 +282,6 @@ tbody th { font-weight: 700; width: 26%; }
 /* milestones ride their own line above the phase bars */
 .sched-track::before { content: ""; position: absolute; left: 0; right: 0; top: 6px; border-top: 2px solid var(--line); }
 .sched-track .grid { position: absolute; top: -8px; bottom: 0; border-left: 1px dashed var(--line); }
-.sched-track .holiday { position: absolute; top: 26px; bottom: 0; background: repeating-linear-gradient(135deg, rgba(255,198,41,.18) 0 6px, transparent 6px 12px); border-radius: 8px; }
-.sched-track .holiday em { position: absolute; bottom: 6px; left: 8px; font: 11px var(--body); font-style: normal; color: var(--muted); white-space: nowrap; }
 .sched-track .bar, .sched-track .cushion { position: absolute; top: 36px; height: 44px; border-radius: 12px; display: flex; align-items: center; padding: 0 12px; font: 700 14px var(--body); color: #fff; white-space: nowrap; overflow: hidden; }
 .bar.b1, .dot.b1 { background: var(--splash); }
 .bar.b2, .dot.b2 { background: var(--brand); }
