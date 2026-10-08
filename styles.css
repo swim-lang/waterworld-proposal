@@ -460,7 +460,10 @@ html.js .stop-page .section-head.split { margin-bottom: 32px; }
 /* ---------- content rhythm (one spacing system for every stop page) ---------- */
 .section > * { margin-top: 0; margin-bottom: 0; }
 .section > * + * { margin-top: 40px; }
-.section > .si-anchor + *, .section > .si-anchor + .section-head + * { margin-top: 56px; }
+/* every stop page: generous, equal space between the hero and the content below it */
+.section > .stop-intro + .si-anchor { margin-top: 0; }
+.section > .si-anchor + *, .section > .si-anchor + .section-head + * { margin-top: 160px; }
+@media (max-width: 760px) { .section > .si-anchor + *, .section > .si-anchor + .section-head + * { margin-top: 72px; } }
 .section > h3.sub { margin-top: 96px; }
 .section > h3.sub + * { margin-top: 20px; }
 .section > .table-wrap + .fine, .section > .timeline + .fine, .section > .sched + .timeline { margin-top: 20px; }
@@ -565,11 +568,9 @@ html.js .stop-page .section-head.split { margin-bottom: 32px; }
 }
 
 /* section 2 breathing room: clear space between the intro and the process strip */
-#approach > .phase-steps { margin-top: 160px; }
 #approach > h3.sub { margin-top: 136px; }
 #approach > h3.sub + .phase-details { margin-top: 28px; }
 #approach > .stop-nav { margin-top: 136px; }
 @media (max-width: 760px) {
-  #approach > .phase-steps { margin-top: 64px; }
   #approach > h3.sub { margin-top: 88px; }
 }
