@@ -166,6 +166,9 @@ p { margin: 0 0 1em; }
 .easier li:nth-child(5) .ez-icon { background: var(--splash); color: #fff; }
 .ez-check { border-left: 4px solid var(--sun); padding: 4px 0 4px 20px; max-width: 44em; }
 .ez-check p { margin: 0 0 6px; }
+.ez-check ul { list-style: none; padding: 0; margin: 4px 0 0; display: grid; gap: 6px; }
+.ez-check li { position: relative; padding-left: 20px; }
+.ez-check li::before { content: ""; position: absolute; left: 2px; top: .62em; width: 7px; height: 7px; border-radius: 999px; background: var(--ink); }
 .ez-k { font: 600 12px var(--body); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); letter-spacing: .04em; }
 
 .phases { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
