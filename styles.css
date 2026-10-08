@@ -267,13 +267,17 @@ tbody th { font-weight: 700; width: 26%; }
 .qa details p { padding-left: 52px; padding-right: 48px; max-width: 46em; font-size: 17px; }
 
 /* footer */
-.footer { background: var(--ink); color: #fff; padding: clamp(64px, 9vw, 110px) var(--pad) 48px; }
-.footer h2 { font-size: clamp(38px, 5vw, 64px); line-height: 1.04; max-width: 14em; color: #fff; margin-bottom: 20px; }
-.footer > p { max-width: 40em; color: #d5e2f0; }
+.footer { background: var(--sun); color: var(--ink); padding: clamp(64px, 9vw, 110px) var(--pad) 48px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 48px; align-items: center; }
+.footer-sun { width: clamp(160px, 22vw, 300px); height: auto; justify-self: end; }
+@media (max-width: 760px) { .footer { grid-template-columns: 1fr; } .footer-sun { order: -1; justify-self: start; width: 96px; } }
+.footer h2 { font-size: clamp(38px, 5vw, 64px); line-height: 1.04; max-width: 14em; color: var(--ink); margin-bottom: 20px; }
+.footer-main > p { max-width: 40em; color: var(--ink); }
+.footer .btn-outline-light { border-color: var(--ink); color: var(--ink); }
+.footer .btn-outline-light:hover { background: rgba(10,42,82,.08); }
 .footer .cta-row { margin: 30px 0 40px; }
 .contact { font-size: 16px; }
-.contact a { color: var(--sun); }
-.footer .fine { color: #9fb3c8; margin-top: 24px; }
+.contact a { color: var(--ink); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+.footer .fine { color: var(--muted); margin-top: 24px; }
 
 /* ---------- zoomed stop view ---------- */
 .stopview { position: fixed; inset: 0; z-index: 50; background: #fff; overflow-y: auto; opacity: 0; transition: opacity .22s var(--ease); }
@@ -521,7 +525,7 @@ html.js .stop-page .section-head.split { margin-bottom: 32px; }
 @media print {
   @page { margin: 16mm; }
   body { font-size: 11pt; }
-  .nav, .mobile-menu, .park, .tour, .stopview, .loader, .sticky-pricing, .skip, .tool, .footer .cta-row, .hero .cta-row { display: none !important; }
+  .nav, .mobile-menu, .park, .tour, .stopview, .loader, .sticky-pricing, .skip, .tool, .footer .cta-row, .footer-sun, .hero .cta-row { display: none !important; }
   .hero { display: block; min-height: 0; padding: 0; }
   .section { padding: 18pt 0; border-top: 1pt solid #000; break-before: page; }
   .section.tint, .note, .phases li, .people li, .timeline li, .fee, .footer { background: none !important; color: #000 !important; border: 1pt solid #ccc; }
